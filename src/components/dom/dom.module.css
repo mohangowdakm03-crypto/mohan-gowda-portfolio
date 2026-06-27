@@ -367,9 +367,9 @@
 
   /* Scrollable nav for mobile */
   .macNav {
-    width: 95%;
+    width: max-content;
+    max-width: 95vw;
     overflow-x: auto;
-    justify-content: flex-start;
     padding: 4px;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
