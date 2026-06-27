@@ -1,0 +1,63 @@
+:root {
+  --background: #050508;
+  --foreground: #e0e0e0;
+  --accent: #a0a5b0;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+html {
+  background: #010205;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* Custom, hyper-realistic Milky Way galaxy generated specifically for this site */
+  background: url("/galaxy.png") center/cover no-repeat;
+  filter: brightness(50%) contrast(110%);
+  opacity: 0.85;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  /* Gentle vignette to darken the edges and draw focus to the center */
+  background: radial-gradient(circle at center, transparent 30%, rgba(2, 4, 10, 0.95) 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

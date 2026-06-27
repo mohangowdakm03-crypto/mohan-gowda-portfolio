@@ -1,0 +1,350 @@
+.section {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  pointer-events: none; /* Let clicks pass to canvas where there's no content */
+}
+
+/* Custom Cursor Styles */
+.customCursorRing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: background 0.1s ease, border-color 0.1s ease;
+}
+
+.customCursorDot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursorActive {
+  transform: scale(1.5);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 1);
+}
+
+/* Add pointer events to actual content wrappers so text is selectable and links clickable */
+.contentWrapper {
+  pointer-events: auto;
+}
+
+.hero {
+  align-items: center;
+  text-align: center;
+  justify-content: flex-end;
+  padding-bottom: 12vh;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 200;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.8);
+}
+
+.tagline {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  text-shadow: 0 2px 15px rgba(0,0,0,0.8);
+}
+
+.aboutText {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  font-weight: 300;
+  color: var(--accent);
+  max-width: 800px;
+}
+
+/* Skills */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.skillCategory {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.skillList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skillItem {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+/* Experience */
+.expList {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.expItem {
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.expItem::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--foreground);
+}
+
+.expRole {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--foreground);
+}
+
+.expCompany {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.expDate {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.expDesc {
+  line-height: 1.6;
+  color: var(--accent);
+  font-weight: 300;
+}
+
+/* Projects */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+.projectCard {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2.5rem;
+  border-radius: 8px;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease, border-color 0.3s ease;
+}
+
+.projectCard:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px) scale(1.02);
+}
+
+.projectTitle {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.projectDesc {
+  color: var(--accent);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.projectTech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.projectTechItem {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: var(--foreground);
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  color: var(--foreground);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.link:hover {
+  border-color: var(--foreground);
+}
+
+/* Contact */
+.contactWrapper {
+  text-align: center;
+}
+
+.contactEmail {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 200;
+  color: var(--foreground);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3rem;
+  transition: opacity 0.2s ease;
+}
+
+.contactEmail:hover {
+  opacity: 0.8;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Mac OS Liquid Glass Nav */
+.macNav {
+  position: fixed;
+  top: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border-radius: 9999px;
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 12px 40px rgba(0, 0, 0, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  pointer-events: auto;
+}
+
+.activeBubble {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: calc(100% - 8px);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(28px) saturate(180%) brightness(115%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%) brightness(115%);
+  border-radius: 9999px;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.15);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.macNavLink {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  transition: color 0.3s ease;
+  letter-spacing: 0.01em;
+}
+
+.macNavLink:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.macNavLink.active {
+  color: #ffffff;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .macNav {
+    width: 90%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 4px;
+    scrollbar-width: none;
+  }
+  .macNav::-webkit-scrollbar {
+    display: none;
+  }
+  .macNavLink {
+    white-space: nowrap;
+    padding: 6px 14px;
+  }
+}
