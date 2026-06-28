@@ -375,12 +375,12 @@
     word-break: break-all;
   }
 
-  /* Scrollable nav for mobile */
+  /* Compressed nav for mobile to fit all options */
   .macNav {
     width: max-content;
-    max-width: 95vw;
+    max-width: 98vw;
     overflow-x: auto;
-    padding: 4px;
+    padding: 3px;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
@@ -389,8 +389,9 @@
   }
   .macNavLink {
     white-space: nowrap;
-    padding: 6px 14px;
-    font-size: 12px;
+    padding: 6px 8px;
+    font-size: 10.5px;
+    letter-spacing: -0.02em;
   }
 }
 
