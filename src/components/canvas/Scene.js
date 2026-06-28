@@ -1,6 +1,6 @@
 'use client';
 
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Environment, Float, PresentationControls, Stars } from '@react-three/drei';
 import { useRef } from 'react';
 import GlassDroplet from './GlassDroplet';
