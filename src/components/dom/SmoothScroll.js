@@ -8,10 +8,11 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 export default function SmoothScroll({ children }) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.5,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // smooth easeOutExpo
-      smooth: true,
-      wheelMultiplier: 1,
+      lerp: 0.08, // Physics-based momentum (replaces fixed duration)
+      smoothWheel: true, // Use smoothWheel instead of deprecated 'smooth'
+      wheelMultiplier: 1.2, // Slightly faster wheel response to prevent heaviness
+      touchMultiplier: 2,
+      infinite: false,
     });
 
     // Synchronize Lenis with GSAP ScrollTrigger
