@@ -41,10 +41,15 @@ export default function SmoothScroll({ children }) {
       }
     };
 
+    // Disable right-click menu globally for anti-theft
+    const preventContextMenu = (e) => e.preventDefault();
+
     document.addEventListener('click', handleAnchorClick);
+    document.addEventListener('contextmenu', preventContextMenu);
 
     return () => {
       document.removeEventListener('click', handleAnchorClick);
+      document.removeEventListener('contextmenu', preventContextMenu);
       gsap.ticker.remove((time) => {
         lenis.raf(time * 1000);
       });
