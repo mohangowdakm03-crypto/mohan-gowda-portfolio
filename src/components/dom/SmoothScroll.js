@@ -7,11 +7,18 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
 export default function SmoothScroll({ children }) {
   useEffect(() => {
+    // Completely disable JS scrolling on mobile/touch devices for zero-lag native scrolling
+    const isMobile = window.innerWidth <= 768 || ('ontouchstart' in window);
+    
+    if (isMobile) {
+      document.documentElement.style.scrollBehavior = 'smooth';
+      return; // Exit early, let the native OS handle scrolling natively
+    }
+
     const lenis = new Lenis({
       lerp: 0.08, // Physics-based momentum (replaces fixed duration)
       smoothWheel: true, // Use smoothWheel instead of deprecated 'smooth'
       wheelMultiplier: 1.2, // Slightly faster wheel response to prevent heaviness
-      touchMultiplier: 2,
       infinite: false,
     });
 

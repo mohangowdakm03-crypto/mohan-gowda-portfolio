@@ -340,7 +340,17 @@
   
   .hero {
     align-items: center;
-    padding-bottom: 8vh;
+    justify-content: flex-end;
+    padding-bottom: 5vh;
+  }
+
+  .title {
+    font-size: clamp(2rem, 10vw, 4rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .tagline {
+    font-size: clamp(0.85rem, 3vw, 1.2rem);
   }
   
   .heading {

@@ -30,6 +30,18 @@ function AnimatedLights() {
   );
 }
 
+function ResponsiveDroplet() {
+  const { viewport } = useThree();
+  const isMobile = viewport.width < 5; // standard phone width threshold in this fov/camera z setup
+  return (
+    <group scale={isMobile ? 0.6 : 1}>
+      <Float speed={2} rotationIntensity={0.5} floatIntensity={1}>
+        <GlassDroplet />
+      </Float>
+    </group>
+  );
+}
+
 export default function Scene() {
   return (
     <Canvas
@@ -57,11 +69,8 @@ export default function Scene() {
         zoom={1}
         rotation={[0, 0, 0]}
         polar={[-Math.PI / 4, Math.PI / 4]}
-        azimuth={[-Math.PI / 4, Math.PI / 4]}
       >
-        <Float speed={2} rotationIntensity={0.5} floatIntensity={1}>
-          <GlassDroplet />
-        </Float>
+        <ResponsiveDroplet />
       </PresentationControls>
     </Canvas>
   );
