@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${montserrat.variable}`}>
-      <body>
+      <body onContextMenu={(e) => e.preventDefault()}>
         <SmoothScroll>
           {children}
         </SmoothScroll>
