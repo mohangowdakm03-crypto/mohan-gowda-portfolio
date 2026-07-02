@@ -53,7 +53,8 @@ export const PORTFOLIO_DATA = {
       title: "NoirBrew",
       description: "A premium Coffee E-Kart platform delivering a seamless, high-aesthetic e-commerce experience.",
       techStack: ["Next.js", "React", "Tailwind CSS", "Vercel"],
-      link: "https://noirbrew.vercel.app/"
+      link: "https://noirbrew.vercel.app/",
+      github: "https://github.com/mohangowdakm03-crypto/noirbrew"
     },
     {
       title: "Med-Triage",
