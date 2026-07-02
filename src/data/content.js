@@ -50,6 +50,12 @@ export const PORTFOLIO_DATA = {
   ],
   projects: [
     {
+      title: "NoirBrew",
+      description: "A premium Coffee E-Kart platform delivering a seamless, high-aesthetic e-commerce experience.",
+      techStack: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+      link: "https://noirbrew.vercel.app/"
+    },
+    {
       title: "Med-Triage",
       description: "An intelligent healthcare technology system designed to optimize patient assessment and routing.",
       techStack: ["Next.js", "FastAPI", "Firebase", "WebRTC", "Llama-3", "Whisper", "Twilio", "OpenStreetMap"],
