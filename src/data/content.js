@@ -50,6 +50,12 @@ export const PORTFOLIO_DATA = {
   ],
   projects: [
     {
+      title: "AI-HackerZ: GraphRAG Brain",
+      description: "An elite, fully-offline, and air-gapped industrial GraphRAG dashboard featuring a local Llama 3.1 LLM, ChromaDB knowledge graph vector store, and a modern Next.js Liquid Glass interface.",
+      techStack: ["Next.js", "FastAPI", "Llama 3.1 (Ollama)", "ChromaDB", "GraphRAG", "Tailwind CSS"],
+      github: "https://github.com/mohangowdakm03-crypto/AI-HAckerZ"
+    },
+    {
       title: "NoirBrew",
       description: "A premium Coffee E-Kart platform delivering a seamless, high-aesthetic e-commerce experience.",
       techStack: ["Next.js", "React", "Tailwind CSS", "Vercel"],
