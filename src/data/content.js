@@ -66,7 +66,7 @@ export const PORTFOLIO_DATA = {
       title: "Med-Triage",
       description: "An intelligent healthcare technology system designed to optimize patient assessment and routing.",
       techStack: ["Next.js", "FastAPI", "Firebase", "WebRTC", "Llama-3", "Whisper", "Twilio", "OpenStreetMap"],
-      link: "https://med-triage-lk9v.vercel.app/",
+      link: "https://med-triage-two.vercel.app",
       github: "https://github.com/mohangowdakm03-crypto/Med-Triage"
     },
     {
