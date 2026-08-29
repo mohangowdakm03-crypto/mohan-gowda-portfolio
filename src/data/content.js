@@ -50,6 +50,12 @@ export const PORTFOLIO_DATA = {
   ],
   projects: [
     {
+      title: "Telco Customer Churn Prediction Pipeline",
+      description: "An enterprise-grade, end-to-end Machine Learning pipeline and serving solution for telecom customer churn prediction. Features automated data ingestion, domain feature engineering, SHAP explainability, and a production FastAPI REST API.",
+      techStack: ["Python", "FastAPI", "scikit-learn", "HistGradientBoosting", "SHAP"],
+      github: "https://github.com/mohangowdakm03-crypto/churn-classifier-sklearn-baseline-with-notebook"
+    },
+    {
       title: "AI-HackerZ: GraphRAG Brain",
       description: "An elite, fully-offline, and air-gapped industrial GraphRAG dashboard featuring a local Llama 3.1 LLM, ChromaDB knowledge graph vector store, and a modern Next.js Liquid Glass interface.",
       techStack: ["Next.js", "FastAPI", "Llama 3.1 (Ollama)", "ChromaDB", "GraphRAG", "Tailwind CSS"],
