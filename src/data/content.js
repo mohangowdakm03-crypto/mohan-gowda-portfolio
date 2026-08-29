@@ -1,65 +1,80 @@
 export const PORTFOLIO_DATA = {
   hero: {
     name: "Mohan Gowda K M",
-    tagline: "AI & Machine Learning Engineer | Visual Designer",
+    tagline: "AI & Machine Learning Engineer | Full Stack Developer",
   },
   about: {
-    text: "I engineer digital experiences at the intersection of complex algorithmic logic and high-impact aesthetics. Specializing in autonomous agents, generative AI workflows, and minimalist visual design. I build systems that are functionally robust and visually commanding."
+    text: "Resourceful Artificial Intelligence and Machine Learning (AIML) engineering student with comprehensive experience across the full software stack. Proficient in developing predictive Machine Learning models, integrating Generative AI APIs, and building responsive full-stack web applications using Next.js and Python. Experienced in cross-functional leadership, multimedia design, open-source collaborative workflows, and technical community building."
   },
   skills: [
     {
-      category: "Core Languages",
-      items: ["Python", "Java", "C", "HTML"]
+      category: "Languages",
+      items: ["Python", "JavaScript", "TypeScript", "Java", "C", "SQL"]
     },
     {
-      category: "AI & Data Ops",
-      items: ["Machine Learning", "Generative AI Workflows", "AI Prompt Engineering", "Data Annotation", "Voice-to-Text Integration"]
+      category: "AI, ML & Data Science",
+      items: ["Large Language Models (LLMs)", "Generative AI", "RAG", "Prompt Engineering", "XGBoost", "Pandas", "NumPy", "Predictive Modeling"]
     },
     {
-      category: "Cloud & Architecture",
-      items: ["Vercel", "Railway.app", "Render", "GitHub", "Autonomous Agent Architecture", "Applied Systems Security"]
+      category: "Full Stack & Web",
+      items: ["React.js", "Next.js 15", "FastAPI", "REST APIs", "HTML", "CSS", "Tailwind CSS", "Framer Motion", "D3.js", "Asynchronous I/O"]
     },
     {
-      category: "Visual Design",
-      items: ["CapCut Pro", "Alight Motion", "VN Editor", "Minimalist UI/UX Design"]
-    },
-    {
-      category: "Databases",
-      items: ["PostgreSQL", "Firebase", "SQLite"]
+      category: "Tools & Workflows",
+      items: ["Git", "GitHub", "Docker", "Vector Databases (ChromaDB)", "NetworkX", "Vercel", "UI/UX Implementation", "Developer Experience (DX)"]
     }
   ],
   experience: [
     {
-      role: "AI Data Annotator",
+      role: "AI Training Contractor",
       company: "Outlier AI",
-      date: "Recent – Present",
-      description: "Contributed to large-scale AI model training and evaluation via strict data annotation protocols for Project Multimango and Project Aether."
+      date: "2025 – 2026",
+      description: "Gained practical experience in AI evaluation by rigorously testing, analyzing, and grading the outputs of state-of-the-art Large Language Models (LLMs) using advanced prompt engineering protocols."
     },
     {
-      role: "Freelance Video Editor & Designer",
-      company: "Skynix & Render Riot",
-      date: "2025 – Present",
-      description: "Architected and delivered high-quality, specialized visual editing and graphic design packages tailored to strict, confidential client specifications."
+      role: "Freelance Multimedia & Digital Design",
+      company: "Spandana Creations",
+      date: "Oct 2025 – Present",
+      description: "Leverage advanced digital video editing and graphic design expertise to create engaging multimedia content, product demonstrations, and promotional materials."
     },
     {
-      role: "AI & ML Engineering Undergraduate",
+      role: "Engineering Team Lead & Event Coordinator",
       company: "P.A. College of Engineering",
-      date: "Present",
-      description: "Maintained active involvement in the IEEE Transportation Electrification Council and advanced IISc tech workshops while researching and developing applied AI systems."
+      date: "2025 – 2026",
+      description: "Led a 4-person engineering team for a 24-hour regional development hackathon, managing technical planning and execution. Acted as student coordinator for college-level events, streamlining campus activities and operational tracking."
     }
   ],
   projects: [
     {
       title: "Telco Customer Churn Prediction Pipeline",
-      description: "An enterprise-grade, end-to-end Machine Learning pipeline and serving solution for telecom customer churn prediction. Features automated data ingestion, domain feature engineering, SHAP explainability, and a production FastAPI REST API.",
+      description: "Architected an enterprise-grade, end-to-end Machine Learning pipeline and serving solution for telecom customer churn prediction. Engineered automated 3-tier data ingestion, domain feature engineering, and multi-model selection. Deployed a champion HistGradientBoosting model achieving 83.32% test accuracy, integrated with SHAP explainability and a production FastAPI REST API.",
       techStack: ["Python", "FastAPI", "scikit-learn", "HistGradientBoosting", "SHAP"],
       github: "https://github.com/mohangowdakm03-crypto/churn-classifier-sklearn-baseline-with-notebook"
     },
     {
-      title: "AI-HackerZ: GraphRAG Brain",
-      description: "An elite, fully-offline, and air-gapped industrial GraphRAG dashboard featuring a local Llama 3.1 LLM, ChromaDB knowledge graph vector store, and a modern Next.js Liquid Glass interface.",
-      techStack: ["Next.js", "FastAPI", "Llama 3.1 (Ollama)", "ChromaDB", "GraphRAG", "Tailwind CSS"],
+      title: "x-Diagnostix (Predictive Machine Learning Pipeline)",
+      description: "Spearheaded data collection, cleaning, and preprocessing on NASA CMAPSS telemetry datasets using Pandas and NumPy to eliminate dimensional noise. Designed and evaluated a predictive ML model (XGBoost regression) to forecast engine Remaining Useful Life (RUL) with high accuracy, mathematically optimizing algorithm convergence.",
+      techStack: ["Python", "Machine Learning", "XGBoost", "Pandas", "NumPy"],
+      github: "https://github.com/mohangowdakm03-crypto/x-Diagnostix"
+    },
+    {
+      title: "GraphRAG Brain (Full Stack Generative AI Platform)",
+      description: "Architected an enterprise air-gapped AI platform converting unstructured data into structured Knowledge Graphs. Engineered a custom Retrieval-Augmented Generation (RAG) pipeline combining ChromaDB vector embeddings with NetworkX topological traversal to power accurate, zero-hallucination causal reasoning. Designed a responsive user-facing frontend with React/Tailwind, integrated via modular REST APIs to a Python backend, supporting real-time data visualization via D3.js.",
+      techStack: ["Python", "Next.js 15", "FastAPI", "RAG", "ChromaDB", "Llama 3.1", "Tailwind CSS", "D3.js"],
       github: "https://github.com/mohangowdakm03-crypto/AI-HAckerZ"
+    },
+    {
+      title: "Med-Triage (End-to-End AI Web Application)",
+      description: "Architected and deployed a live healthcare routing system, managing the complete Full Stack lifecycle from a responsive React.js frontend to a Docker-containerized Python backend. Reduced processing latency to seconds by engineering an asynchronous data pipeline integrating third-party AI APIs (Groq, Whisper, Llama 3.1) for real-time speech-to-text and medical severity analysis.",
+      techStack: ["TypeScript", "React (Next.js)", "Python", "FastAPI", "Groq API", "Docker", "Vercel"],
+      link: "https://med-triage-two.vercel.app",
+      github: "https://github.com/mohangowdakm03-crypto/Med-Triage"
+    },
+    {
+      title: "Pace Skill Connect (Client-Server Integration)",
+      description: "Developed structural HTML/CSS frontends for a campus-wide student portal and integrated it deeply with a pure Java backend architecture, ensuring robust client-server communication.",
+      techStack: ["HTML", "CSS", "Java"],
+      github: "https://github.com/mohangowdakm03-crypto/Pace-Skill-Connect"
     },
     {
       title: "NoirBrew",
@@ -67,13 +82,6 @@ export const PORTFOLIO_DATA = {
       techStack: ["Next.js", "React", "Tailwind CSS", "Vercel"],
       link: "https://noirbrew.vercel.app/",
       github: "https://github.com/mohangowdakm03-crypto/noirbrew"
-    },
-    {
-      title: "Med-Triage",
-      description: "An intelligent healthcare technology system designed to optimize patient assessment and routing.",
-      techStack: ["Next.js", "FastAPI", "Firebase", "WebRTC", "Llama-3", "Whisper", "Twilio", "OpenStreetMap"],
-      link: "https://med-triage-two.vercel.app",
-      github: "https://github.com/mohangowdakm03-crypto/Med-Triage"
     },
     {
       title: "AI Interview Simulator",
@@ -87,12 +95,6 @@ export const PORTFOLIO_DATA = {
       description: "An autonomous agent engineered for intelligent educational assistance and video translation.",
       techStack: ["Python", "OpenAI Whisper", "AI4Bharat IndicTrans2", "Edge-TTS/VITS", "FFmpeg", "MoviePy"],
       github: "https://github.com/mohangowdakm03-crypto/Vidya-Setu"
-    },
-    {
-      title: "PACE Skill Connect",
-      description: "A full-stack, localized networking platform utilizing a multi-threaded custom server to bridge technical skill gaps and facilitate rapid project team formation.",
-      techStack: ["Java", "HTML5", "TailwindCSS", "JavaScript (REST API)"],
-      github: "https://github.com/mohangowdakm03-crypto/Pace-Skill-Connect"
     }
   ],
   contact: {
