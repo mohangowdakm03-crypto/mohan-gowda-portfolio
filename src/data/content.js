@@ -50,6 +50,10 @@ export const PORTFOLIO_DATA = {
       description: "Architected an end-to-end AI-powered quiz generation and real-time synchronized live examination platform. Integrated Google Gemini API and PDF.js for automated question extraction from documents. Engineered sub-second live classroom leaderboards for 60+ concurrent students using Supabase Realtime and Firebase Firestore, complete with anti-cheat controls (fullscreen lock, tab-switch tracking), question difficulty heatmaps, and automated Google Sheets grade exports.",
       techStack: ["React", "Vite", "Google Gemini API", "Supabase Realtime", "Firebase", "Tailwind CSS", "PDF.js"],
       link: "https://rag-quiz-platform.web.app",
+      links: [
+        { label: "Student Exam Portal", url: "https://rag-quiz-platform.web.app" },
+        { label: "Teacher Dashboard", url: "https://rag-quiz-platform.web.app/teacher" }
+      ],
       github: "https://github.com/mohangowdakm03-crypto/rag-quiz-platform"
     },
     {

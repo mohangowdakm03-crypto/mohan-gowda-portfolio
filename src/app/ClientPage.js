@@ -126,7 +126,15 @@ export default function ClientPage() {
                     ))}
                   </div>
                   <div className={domStyles.projectLinks}>
-                    {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer" className={domStyles.link}>View Deployment</a>}
+                    {project.links ? (
+                      project.links.map((linkItem, i) => (
+                        <a key={i} href={linkItem.url} target="_blank" rel="noopener noreferrer" className={domStyles.link}>
+                          {linkItem.label}
+                        </a>
+                      ))
+                    ) : (
+                      project.link && <a href={project.link} target="_blank" rel="noopener noreferrer" className={domStyles.link}>View Deployment</a>
+                    )}
                     {project.github && <a href={project.github} target="_blank" rel="noopener noreferrer" className={domStyles.link}>Source Code</a>}
                   </div>
                 </div>
