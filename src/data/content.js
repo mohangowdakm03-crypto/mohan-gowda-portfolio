@@ -17,11 +17,11 @@ export const PORTFOLIO_DATA = {
     },
     {
       category: "Full Stack & Web",
-      items: ["React.js", "Next.js 15", "FastAPI", "REST APIs", "HTML", "CSS", "Tailwind CSS", "Framer Motion", "D3.js", "Asynchronous I/O"]
+      items: ["React.js", "Next.js 15", "Vite", "FastAPI", "REST APIs", "HTML", "CSS", "Tailwind CSS", "Framer Motion", "D3.js", "Asynchronous I/O"]
     },
     {
       category: "Tools & Workflows",
-      items: ["Git", "GitHub", "Docker", "Vector Databases (ChromaDB)", "NetworkX", "Vercel", "UI/UX Implementation", "Developer Experience (DX)"]
+      items: ["Git", "GitHub", "Docker", "Supabase", "Firebase", "Vector Databases (ChromaDB)", "NetworkX", "Vercel", "UI/UX Implementation", "Developer Experience (DX)"]
     }
   ],
   experience: [
@@ -45,6 +45,13 @@ export const PORTFOLIO_DATA = {
     }
   ],
   projects: [
+    {
+      title: "Oxvane (AI Quiz Maker & Live Assessment Platform)",
+      description: "Architected an end-to-end AI-powered quiz generation and real-time synchronized live examination platform. Integrated Google Gemini API and PDF.js for automated question extraction from documents. Engineered sub-second live classroom leaderboards for 60+ concurrent students using Supabase Realtime and Firebase Firestore, complete with anti-cheat controls (fullscreen lock, tab-switch tracking), question difficulty heatmaps, and automated Google Sheets grade exports.",
+      techStack: ["React", "Vite", "Google Gemini API", "Supabase Realtime", "Firebase", "Tailwind CSS", "PDF.js"],
+      link: "https://rag-quiz-platform.web.app",
+      github: "https://github.com/mohangowdakm03-crypto/rag-quiz-platform"
+    },
     {
       title: "Telco Customer Churn Prediction Pipeline",
       description: "Architected an enterprise-grade, end-to-end Machine Learning pipeline and serving solution for telecom customer churn prediction. Engineered automated 3-tier data ingestion, domain feature engineering, and multi-model selection. Deployed a champion HistGradientBoosting model achieving 83.32% test accuracy, integrated with SHAP explainability and a production FastAPI REST API.",
